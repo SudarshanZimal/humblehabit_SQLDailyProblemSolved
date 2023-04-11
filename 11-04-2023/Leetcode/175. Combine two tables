@@ -1,1 +1,5 @@
 
+# Write your MySQL query statement below 
+-- query
+/*SELECT table2_name.column_name, table1_name.column_name, table2_name.column_name, table2_name.column_name FROM table1_name  LEFT JOIN table2_name ON table2_name.column_name = table1_name.column_name;*/
+SELECT Person.firstName, Person.lastName, Address.city, Address.state FROM Person  LEFT JOIN Address ON Person.personId = Address.personId;
