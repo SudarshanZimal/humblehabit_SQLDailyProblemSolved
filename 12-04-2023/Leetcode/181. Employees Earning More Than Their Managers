@@ -6,3 +6,6 @@ SELECT a.name "Employee" FROM Employee a ,Employee b WHERE a.managerId = b.Id AN
 
 # query using where clause another approach
 select name as Employee from Employee e where salary > (select salary from Employee where id=e.managerId);
+
+# USING JOIN CLAUSE
+SELECT a.name"Employee" From Employee  a JOIN Employee b ON a.managerId = b.Id AND a.Salary > b.Salary;
