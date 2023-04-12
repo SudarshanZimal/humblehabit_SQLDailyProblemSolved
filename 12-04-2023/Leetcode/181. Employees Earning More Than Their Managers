@@ -3,3 +3,6 @@
 
 # USING WHERE CLAUSE 
 SELECT a.name "Employee" FROM Employee a ,Employee b WHERE a.managerId = b.Id AND a.salary > b.salary;
+
+# query using where clause another approach
+select name as Employee from Employee e where salary > (select salary from Employee where id=e.managerId);
