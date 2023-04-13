@@ -1,2 +1,7 @@
 /*below queries using the group by and having
 SELECT email FROM Person group by email  having  count(email) >1;
+
+
+--below queries using the group by and a temporary table
+
+select email from ( select email , count(email) as num from person group by email) as statistic where num >1;
