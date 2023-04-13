@@ -1,1 +1,2 @@
-
+/*below queries using the group by and having
+SELECT email FROM Person group by email  having  count(email) >1;
