@@ -1,1 +1,4 @@
+################### MY SOLUTION #########################
 
+
+select * from CITY where COUNTRYCODE ='JPN';
