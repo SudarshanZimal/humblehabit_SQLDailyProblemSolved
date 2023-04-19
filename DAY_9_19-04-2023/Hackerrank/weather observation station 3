@@ -1,1 +1,13 @@
+##################################   weather observation station 3 ##############################3
+
+
 SELECT distinct CITY FROM STATION WHERE MOD(ID,2) = 0;
+
+
+############################# Weather obseravation station 4 ####################################
+
+
+SELECT (COUNT(*) - COUNT(DISTINCT CITY))FROM STATION;
+
+
+SELECT (COUNT(CITY) - COUNT(DISTINCT CITY))FROM STATION;
