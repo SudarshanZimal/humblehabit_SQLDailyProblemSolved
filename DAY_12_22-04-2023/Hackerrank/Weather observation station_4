@@ -1,1 +1,10 @@
+##################### 1 st approch ###################################
+select count(*) - count( distinct city) from station;
 
+
+########################### 2 nd approch #############################
+select count(*) - count( distinct city)  as differencefrom station;
+
+########################### 3rd appraoch #############################
+
+select count(city) - count( distinct city) from station;
