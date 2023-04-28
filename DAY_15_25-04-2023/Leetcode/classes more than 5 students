@@ -1,2 +1,17 @@
 # Write your MySQL query statement below
 select class from Courses  group by class having count(student) >= 5;
+
+
+Using having
+
+select class
+from courses 
+having count(distinct student) >= 5
+Using sub query
+
+select class
+from 
+    (select class, count(distinct student) as num
+    from courses
+    group by class) as temp
+where num >= 5;
