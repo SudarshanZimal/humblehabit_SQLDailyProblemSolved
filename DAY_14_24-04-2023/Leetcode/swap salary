@@ -1,1 +1,25 @@
 
+
+1. CASE expression
+
+UPDATE Salary SET sex = (CASE sex WHEN 'm' THEN 'f' ELSE 'm' END)
+
+2.  using ternary operator
+
+update Salary set sex = if(sex = 'm', 'f', 'm');
+
+3. REPLACE() function
+
+UPDATE Salary SET sex = REPLACE('fm', sex, '')
+4. Math approach
+
+UPDATE Salary SET sex = CHAR(ASCII('f') + ASCII('m') - ASCII(sex))
+5. XOR swap
+
+https://en.wikipedia.org/wiki/XOR_swap_algorithm
+
+UPDATE Salary SET sex = CHAR(ASCII('f') ^ ASCII('m') ^ ASCII(sex))
+or
+
+UPDATE Salary SET sex = CHAR(ASCII(sex) ^ 11)
+NOTE: ASCII('f') ^ ASCII('m') = 11
